@@ -1,129 +1,211 @@
-Excel-2
+# 📊 Excel-2
 
-Project description
+![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
+![Excel](https://img.shields.io/badge/Microsoft-Excel-blue.svg)
 
-Excel-2 is a guide to most popular Excel formulas and functions. Here you'll find practical tips, instructions, and illustrations about working with those features, Named ranges and Paste Special. Book2 Excel file consists of 3 sheets: Popular formulas, Other operations and Named Ranges.
+## ✨ Project Description
 
-Table of Contents
+**Excel-2** is a guide to the most popular Excel formulas and functions. Here you'll find practical tips, instructions, and illustrations about working with basic functions, Named Ranges, and Paste Special.
 
-COUNT
+> 📚 **Goal:** Help you understand and use the most common Excel features efficiently—perfect for beginners and intermediate users!
 
-![screenshot](Screenshots/Count.png)
-COUNT function is used to count the numer of cells containing numbers. (Note: To count all non blank cells use COUNTA)
+---
 
-SUM
+## 📒 Table of Contents
 
-![screenshot](Screenshots/Sum.png)
-In order to sum a range of cells, use the SUM function. In this example we calculate the sum of the top 3 numbers in range. (Note: LARGE function returns array constant {92, 88, 54}. This result is used as an argument for the SUM function)
+- [COUNT](#count)
+- [SUM](#sum)
+- [IF](#if)
+- [AVERAGE](#average)
+- [COUNTIF](#countif)
+- [SUMIF](#sumif)
+- [VLOOKUP](#vlookup)
+- [MIN and MAX](#min-and-max)
+- [SUMPRODUCT](#sumproduct)
+- [MOD, ABS, PRODUCT, SQRT](#mod-abs-product-sqrt)
+- [Named Ranges](#named-ranges)
+- [Paste Special](#paste-special)
+- [Screenshots](#screenshots)
+- [Requirements](#requirements)
+- [Author](#-author)
 
-IF
+---
 
-![screenshot](Screenshots/If.png)
-IF function checks if condition is met. It returns one value if true and another one if false. In this example we check numbers in range C2:C6. If they are greater than or equal to 50 we return Pass, else we return Fail.
+## 🔢 COUNT
 
-AVERAGE
+![COUNT](Screenshots/Count.png)
 
-![screenshot](Screenshots/Average.png)
-AVERAGE function is used to calculate the average of a group of numbers. In this example we calculate the average of the 3 smallest numbers in range. (NOTE: SMALL function returns array constant {1, 7, 14}. This result is used as an argument for the AVERAGE function)
+**COUNT** function is used to count the number of cells containing numbers.  
+*Note: To count all non-blank cells use COUNTA.*
 
-COUNTIF
+---
 
-![screenshot](Screenshots/Countif.png)
-COUNTIF function counts the numer of cells that meet the condition; here TRUE.
+## ➕ SUM
 
-SUMIF
+![SUM](Screenshots/Sum.png)
 
-![screenshot](Screenshots/Sumif.png)
-In this example the SUMIF function sums values in range L1:L6 if the corresponding cells in the range K1:K6 containt exactly 1 character+star. (Note: ? symbol matches exactly 1 character)
+**SUM** function adds up a range of cells.  
+In this example, the sum of the top 3 numbers in the range is calculated.  
+*Note: The LARGE function returns an array constant {92, 88, 54}. This result is then summed.*
 
-VLOOKUP
+---
 
-![screenshot](Screenshots/Vlookup.png)
-VLOOKUP function looks as follows: VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]). In our example lookup value is 58 (cell T1). Function looks for it in the leftmost column of the N2:Q6 range table. The third argument: 4 tells the VLOOKUP function to return the value in the same row from the fourth column of the N2:Q6 table.
-(NOTE: last argument: FALSE means exact match and TRUE means approximate match)
+## ❓ IF
 
-MIN and MAX 
+![IF](Screenshots/If.png)
 
-![screenshot](Screenshots/Min.png)
-![screenshot](Screenshots/Max.png)
-Use MIN to find the minimum value and MAX to find the maximum value.
+**IF** function checks if a condition is met, returning one value if true and another if false.  
+Example: Numbers in range C2:C6 are checked. If they are ≥50, return "Pass", otherwise "Fail".
 
-SUMPRODUCT
+---
 
-![screenshot](Screenshots/Sumproduct.png)
-SUMPRODUCT function is used to calculate the sum of the products of corresponding numbers in one or more ranges. In this example the calculation looks like this: (10 * 1,50) + (7 * 3,00) + (23 * 2,00) + (11 * 1,70) = 100,70
+## 📊 AVERAGE
 
-Subtract
+![AVERAGE](Screenshots/Average.png)
 
-There is no official SUBTRACT function in Excel. However there are many other ways to perform this operation.
+**AVERAGE** calculates the average of a group of numbers.  
+Here, the average of the 3 smallest numbers in the range is calculated.  
+*Note: The SMALL function returns an array constant {1, 7, 14}.*
 
-![screenshot](Screenshots/Subtract.png)
-In this example we subtract 10 from each row of range A1:A7. (Note: We use absolute reference $A$9. This means that when we type =A1-$A$9 in cell B1 and drag the formula down the absoulute reference ($A$9) stays the same while relative reference (A1) changes to A2, A3 etc.)
+---
 
-Paste Special
-It is possible to perform subtraction and many other operations using Paste Special feature.
-Here is how to do it:
+## 🔍 COUNTIF
 
-![screenshot](Screenshots/Copy.png)
-1. Select cell D9 and press CTRL + C to copy.
+![COUNTIF](Screenshots/Countif.png)
 
-![screenshot](Screenshots/PasteSpecial.png)
-2. Select range D1:D7, right click and click Paste Special. In operation section check Subtract.
+**COUNTIF** counts the number of cells that meet a condition (here: TRUE).
 
-![screenshot](Screenshots/PasteSpecialResult.png)
-3.Here is the result.
+---
 
-Multiply
+## ➕ SUMIF
 
-To multiply numbers in Excel use * or PRODUCT function. You can also use Paste Special
+![SUMIF](Screenshots/Sumif.png)
 
-![screenshot](Screenshots/Product.png)
-PRODUCT function.
+**SUMIF** sums values in range L1:L6 if the corresponding cells in K1:K6 contain exactly one character plus a star.  
+*Note: The `?` symbol matches exactly 1 character.*
 
-Division
+---
 
-There's no official DIVIDE function in Excel. Use / symbol to divide numbers. To get the remainder of division, use the MOD function.
+## 🔎 VLOOKUP
 
-![screenshot](Screenshots/Mod.png)
-MOD function.
+![VLOOKUP](Screenshots/Vlookup.png)
 
-Square Root
+**VLOOKUP** searches for a value in the leftmost column of a table and returns a value in the same row from another column.  
+Example: Lookup value is 58 (cell T1).  
+*Note: Last argument—FALSE means exact match, TRUE means approximate match.*
 
-To square a number multiply it by itself using * symbol or use ^2
+---
 
-![screenshot](Screenshots/Sqrt.png)
-SQRT function.
+## 📉 MIN and MAX
 
-ABS
+![MIN](Screenshots/Min.png) ![MAX](Screenshots/Max.png)
 
-![screenshot](Screenshots/Abs.png)
-To remove - sign from negative number use ABS function.
+Use **MIN** to find the minimum value and **MAX** to find the maximum value.
 
-Named Range
+---
 
-![screenshot](Screenshots/NamedRange.png)
-To create named range in Excel first select the range and then type the name in the Name Box and press Enter. (Note: You can also create named constant. On the formulas tab in the Defined Names group select Define Name. Enter name, value and press OK. You can now use this named constant in formulas.)
-(Note: Use the Name Manager in Excel to view, edit and delete named ranges and named constants. You can find it in the Formulas tab, in the Defined Names group, Name Manager.)
+## ✖️ SUMPRODUCT
 
-![screenshot](Screenshots/NamedRangeResult.png)
-Using Named Range in formula.
+![SUMPRODUCT](Screenshots/Sumproduct.png)
 
-Create From Selection
+**SUMPRODUCT** calculates the sum of the products of corresponding numbers in one or more ranges.  
+Here: (10 × 1.50) + (7 × 3.00) + (23 × 2.00) + (11 * 1,70) = 100,70.
 
-If your data has labels, you can easily create named ranges in Excel.
+---
 
-![screenshot](Screenshots/CreateFromSelection.png)
-1. Select the range D1:G13 then on the Formulas tab, in the Defined Names group, click Create from Selection.
+## 🧮 MOD, ABS, PRODUCT, SQRT
 
-![screenshot](Screenshots/Options.png)
-2. Select Top row and left column and press OK. Excel created 15 named ranges for you.
+### MOD and Division
 
-![screenshot](Screenshots/CreateFromSelection1.png)
-![screenshot](Screenshots/CreateFromSelection2.png)
-3. Use the intersect operator (space) to return the intersection of two named ranges.
+![MOD](Screenshots/Mod.png)
 
+Use `/` for division. To find the remainder, use the **MOD** function.
 
+---
 
+### PRODUCT
 
+![PRODUCT](Screenshots/Product.png)
 
+Use `*` or the **PRODUCT** function to multiply numbers. You can also use Paste Special.
 
+---
+
+### SQRT
+
+![SQRT](Screenshots/Sqrt.png)
+
+To find the square root, use **SQRT** or raise to the power `^0.5`.
+
+---
+
+### ABS
+
+![ABS](Screenshots/Abs.png)
+
+**ABS** removes the minus sign from negative numbers.
+
+---
+
+## 🏷️ Named Ranges
+
+![NamedRange](Screenshots/NamedRange.png)
+
+To create a named range:
+1. Select the range.
+2. Type the name in the Name Box and press Enter.
+
+*Use the Name Manager (Formulas tab > Defined Names group > Name Manager) to view, edit, or delete named ranges or constants.*
+
+![NamedRangeResult](Screenshots/NamedRangeResult.png)
+
+Using a named range in a formula.
+
+### Create From Selection
+
+![CreateFromSelection](Screenshots/CreateFromSelection.png)
+
+If your data has labels:
+1. Select the range (e.g., D1:G13), then in the Formulas tab, Defined Names group, click **Create from Selection**.
+2. Choose "Top row" and "Left column" and press OK—Excel will create named ranges automatically.
+
+![Options](Screenshots/Options.png)
+![CreateFromSelection1](Screenshots/CreateFromSelection1.png)
+![CreateFromSelection2](Screenshots/CreateFromSelection2.png)
+
+Use the intersect operator (space) to return the intersection of two named ranges.
+
+---
+
+## 📋 Paste Special
+
+You can perform subtraction and other operations using Paste Special.
+
+1. Select cell D9 and press **CTRL + C** to copy.  
+   ![Copy](Screenshots/Copy.png)
+2. Select range D1:D7, right-click and choose **Paste Special**. In the Operation section, check **Subtract**.  
+   ![PasteSpecial](Screenshots/PasteSpecial.png)
+3. See the result:  
+   ![PasteSpecialResult](Screenshots/PasteSpecialResult.png)
+
+---
+
+## 📷 Screenshots
+
+All screenshots can be found in the `/Screenshots` folder.
+
+---
+
+## ℹ️ Requirements
+
+- Microsoft Excel (recommended: 2021/365 for modern formulas)
+- Windows OS
+
+---
+
+## 👨‍💻 Author
+
+Project and documentation by **Kuba27x**  
+Repository: [Kuba27x/Excel-2](https://github.com/Kuba27x/Excel-2)
+
+---
