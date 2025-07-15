@@ -24,16 +24,16 @@ IF function checks if condition is met. It returns one value if true and another
 AVERAGE
 
 ![screenshot](Screenshots/Average.png)
-AVERAGE function is used to calculate the average of a group of numebers. In this example we calculate the average of the 3 smallest numbers in range. (NOTE: SMALL function returns array constant {1, 7, 14}. This result is used as an argument for the AVERAGE function)
+AVERAGE function is used to calculate the average of a group of numbers. In this example we calculate the average of the 3 smallest numbers in range. (NOTE: SMALL function returns array constant {1, 7, 14}. This result is used as an argument for the AVERAGE function)
 
 COUNTIF
 
-![screenshot](Screenshots/CountIf.png)
+![screenshot](Screenshots/Countif.png)
 COUNTIF function counts the numer of cells that meet the condition; here TRUE.
 
 SUMIF
 
-![screenshot](Screenshots/SumIf.png)
+![screenshot](Screenshots/Sumif.png)
 In this example the SUMIF function sums values in range L1:L6 if the corresponding cells in the range K1:K6 containt exactly 1 character+star. (Note: ? symbol matches exactly 1 character)
 
 VLOOKUP
